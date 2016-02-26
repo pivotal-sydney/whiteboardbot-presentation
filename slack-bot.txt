@@ -1,0 +1,188 @@
+simple yet powerful interface
+many exisitng integrations - examples
+single interface to many apps
+like irc, but better
+cool signup process (chat with slackbot)
+conversational "ui" style
+easy for devs to build integrations/bots
+limited ui (text + formatting + attachment) - easy to build, but might be challenging (different way of thinking about ux)
+easy to use/install integrations (slack app/button)
+web, mobile, deskttop clients
+
+slack integration(s)
+	- bot
+	- slash commands
+	- webhooks (in/out)
+	- slack app/button
+	
+slack api(s)
+	- rtm
+	- web api
+	
+slack cool features:
+	- reactions
+	- attachments
+	
+go lang
+	- slack library
+	- go vs java
+	
+elixir?
+	slacker 
+	
+our bots run on CF
+
+ 
+demo of whiteboard bot (lunch finder, racquet bot)
+
+
+54.84.85.220,54.84.112.162,54.85.141.236,54.86.187.144,54.86.233.33,54.88.36.32,54.88.9.119,54.88.42.21,54.88.46.179,54.208.167.186,54.209.85.236,54.236.219.204
+
+
+### Intro
+
+## Backstory...
+- Introduces what Whiteboard is and how we use it
+	-- Show screenshots of whiteboard and how we use it
+	-- show pictures of team at stand up
+- Explain slightly about the problem space 
+	-- Access issues if not connected to wifi (white listing IPs)
+	-- Require Okta/sign in process in order to input items
+	-- Using a mobile phone on the website isn't pretty and a hindrance
+	-- Standups sometimes occurred at Marlow's
+
+- Solution
+	-- Pivotal uses Slack as a communication tool between offices, teams, technical groups etc.
+  -- Slack integrations: bot (web api, realtime api) , slash commands, webhooks, slack app/button	
+	-- Simple racquetbot had already been developed 
+	-- Use Slack to create a bot with conversational "ui" style
+	
+## Slack 
+- Mobile app vs SlackBot
+	-- Supporting different platforms for doing the same thing
+		-- Need to create a new app for iOS, Android
+			-- Slow... 
+			-- need many screens
+			-- design app twice to match mobile device style
+			-- need to design User interactions
+			-- screen flows 
+			-- branding
+			-- support for old and new OS versions
+			-- distribute a brand new app to install on their devices
+			-- learn different languages to build on multiple mobile devices
+			
+				
+		-- Slack iOS and Android clients already exist.  It IS the UI interface to our app. (And many other bot apps)
+			-- Text based interface is simple, text as input, text as output.  No more building buttons.
+			-- No to very little visual design required (no pixel pushing, branding etc.)
+			-- Conversational UI is a delightful user experience
+			-- Markdown, emoji, attachments, links for richer user experience 
+			-- Very very fast development cycle providing immediate user value
+			
+## Our Journey
+	
+	- first day - investigation: learning language (GO), toolls & setup for TDD/BDD, IDE, learn slack API, pick slack go lib, setup bot/integration
+		-- Within mere hours, first fully functioning feature tested, implemented, and delivered.
+	- second day - working bot with basic functionality: mirror messages, create new faces, CI (cicrcle ci)
+	- ability to create and update new faces... then ported to events, helps, interestings
+	- iterated on feature set: 
+		- abbreviations to reduce number of keystrokes 
+		- case insensitivity because mobile phones tend to capitalize the first character
+		- wb ? for help and usage
+		- had Pam help with design for look and feel of the user feedback messages (show iterations through demos)
+		- ability to present so we could run standup all using just slack
+		- clunky initial pass required users to start an item, then update.  
+		- combined title into create command
+		- we abbreviated commands
+		- improved input to be unique for users
+		- added ability to register to multiple standups
+		- Auto-complete the author by pulling data from Slack
+		
+	
+	
+	
+	- others: changes to the whiteboard to expose some 
+
+		
+		
+Slack works for Productivity tools.  Simple UI to complete simple tasks. Mobile apps are still important for rich user interactions.
+
+*WhiteboardBot*
+A journey discovering Slack
+>Andrew Leung
+>aleung@pivotal.io
+
+>Dariusz Lorenc
+>dlorenc@pivotal.io
+
+
+*Backstory…*​
+
+- Daily standups @ 9:06am
+
+http://static.stthomas.edu/newsroom/news/wp-content/uploads/2015/06/img_pivotal-jp.jpeg
+
+*Whiteboard!*​
+
+
+*Typical Whiteboard usage*
+- Works great when accessed using a desktop
+- Can utilise web interface
+
+*Not perfect mobile experience*
+- Require sign in process in order to input and view items
+- Website is not mobile friendly
+
+*Solution*
+- Pivotal uses Slack as a communication tool between offices, teams, technical groups etc.
+- Slack provides integrations: 
+	- bot (web api, realtime api) 
+	- slash commands
+	- webhooks
+- Simple racquetbot had already been developed 
+- Use Slack to create a bot with conversational UI style
+
+*Mobile App vs Slack Bot*
+
+Supporting different platforms for doing the same thing
+- need to create a new app for iOS, Android
+- slow... 
+- need many screens
+- design app twice to match mobile device style
+- need to design user interactions
+- screen flows 
+- branding
+- support for old and new OS versions
+- distribute a brand new app to install on their devices
+- learn different languages to build on multiple mobile devices
+
+Slack iOS and Android clients already exist.  It IS the UI interface to our app. (And many other bot apps)
+ - text based interface is simple, text as input, text as output.  No more building buttons.
+ - no to very little visual design required (no pixel pushing, branding etc.)
+ - conversational UI is a delightful user experience
+ - markdown, emoji, attachments, links for richer user experience 
+ - very very fast development cycle providing immediate user value
+
+*Our Journey*
+
+First day
+ - Within mere hours, first fully functioning feature tested, implemented, and delivered
+ - TDD/BDD setup
+ - Continuous Integration (Cicrcle CI)
+ - Backlog of stories in Pivotal Tracker
+
+Second day
+ - more features: ability to create and update new faces... then ported to events, helps, interestings
+
+Iterated on feature set 
+ - abbreviations to reduce number of keystrokes 
+ - case insensitivity because mobile phones tend to capitalize the first character
+ - wb ? for help and usage
+ - had Pam help with design for look and feel of the user feedback messages (show iterations through demos)
+ - ability to present so we could run standup all using just slack
+ - clunky initial pass required users to start an item, then update.  
+ - combined title into create command
+ - we abbreviated commands
+ - improved input to be unique for users
+ - added ability to register to multiple standups
+ - auto-complete the author by pulling data from Slack
