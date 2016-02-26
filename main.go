@@ -166,13 +166,17 @@ func HealthCheckServer(responseWriter http.ResponseWriter, req *http.Request) {
 }
 
 func ParseMessageEvent(rtm *slack.RTM, event *slack.MessageEvent) {
-        if event.Msg.Text == "next" {
+        if matches(event.Msg.Text, "next") {
 		if index >= len(slides) {
 			postMessage("The End...", rtm, event)
 		}
 		postMessage(slides[index], rtm, event)
         	index++
         }
+}
+
+func matches(keyword string, command string) bool {
+	return len(keyword) > 0 && len(keyword) <= len(command) && command[:len(keyword)] == keyword
 }
 
 func postMessage(text string, rtm *slack.RTM, event *slack.MessageEvent) {
