@@ -47,47 +47,45 @@ var (
 		},
 		slack.Attachment{
 			Title: "Solution",
-			Text: `
-- Pivotal uses Slack as a communication tool between offices, teams, technical groups etc.
-- Slack provides integrations: bot, slash commands, webhooks
+			Text:
+`- ​*We use Slack*​ as a communication tool
+- Slack provides integrations - ​*bots*​
 - Simple racquetbot had already been developed
-- Use Slack to create a bot with conversational UI style`,
+- Why not use Slack to create a bot with ​*conversational UI style*​`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
 		slack.Attachment{
 			Title: "Mobile App vs Slack Bot",
-			Text: `
-Supporting different platforms for doing the same thing
-- need to create a new app for iOS, Android
-- slow...
-- need many screens
-- design app twice to match mobile device style
-- need to design user interactions
-- screen flows
+			Text:
+`Supporting different mobile platforms
+- create a new app for ​*iOS, Android*​
+- ​*design app twice*​ to match mobile device style
+- many screens
+- design user interactions / screen flows
 - branding
 - support for old and new OS versions
-- distribute a brand new app to install on their devices
-- learn different languages to build on multiple mobile devices`,
+- ​*distribute*​ a brand new app to install on their devices
+- ​*different languages*​ to build on multiple mobile devices`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
 		slack.Attachment{
 			Title: "Mobile App vs Slack Bot",
-			Text: `
-Slack iOS and Android clients already exist.  It IS the UI interface to our app. (And many other bot apps)
- - text based interface is simple, text as input, text as output.  No more building buttons.
- - no to very little visual design required (no pixel pushing, branding etc.)
- - conversational UI is a delightful user experience
- - markdown, emoji, attachments, links for richer user experience
- - very very fast development cycle providing immediate user value`,
+			Text:
+`Slack clients for mobile devices already exist. It IS the UI interface to our app. (And many other bot apps)
+- text based interface is ​*simple*​, text as input, text as output. ​*No more building buttons.*​
+- very little visual design required (​*no pixel pushing*​, branding etc.)
+- ​*conversational UI*​ is a delightful user experience
+- markdown, emoji, attachments, links for richer user experience
+- ​*fast development cycle*​ providing ​*immediate user value*​`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
 		slack.Attachment{
 			Title: "Our Journey",
-			Text: `
-First day
+			Text:
+`First day
  - Within mere hours, first fully functioning feature tested, implemented, and delivered
 Second day
  - more features: ability to create and update new faces... then ported to events, helps, interestings`,
@@ -96,18 +94,60 @@ Second day
 		},
 		slack.Attachment{
 			Title: "Iterated on feature set",
-			Text: `
-- auto-complete the author by pulling data from Slack
-- abbreviations to reduce number of keystrokes
-- case insensitivity because mobile phones tend to capitalize the first character
-- clunky initial pass required users to start an item, then update
+			Text:
+`- abbreviations & case insensitivity
 - combined title into create command
-- wb ? for help and usage
-- improved input to be unique for users
-- added ability to register to multiple standups
-- ability to present so we could run standup all using just slack
-- had Pam help with design for look and feel of the user feedback messages (show iterations through demos)
-`,
+- help and usage
+- ability to present standup
+- look and feel improvements`,
+			ImageURL: "https://cdn-images-2.medium.com/max/800/1*a036VX4scwQquEtBOef8tg.jpeg",
+			Color:      TAB_COLOR,
+			MarkdownIn: []string{"text"},
+		},
+		slack.Attachment{
+			Title: "Demo time - Iteration 1",
+			Text: `- mirror message, new faces, helps, interesting, events`,
+			Color:      TAB_COLOR,
+			MarkdownIn: []string{"text"},
+		},
+		slack.Attachment{
+			Title: "Demo time - Iteration 2",
+			Text:
+`- abbreviated commands
+- case insentivity`,
+			Color:      TAB_COLOR,
+			MarkdownIn: []string{"text"},
+		},
+		slack.Attachment{
+			Title: "Demo time - Iteration 3",
+			Text:
+`- combined title into create command
+- help/usage
+- present standup`,
+			Color:      TAB_COLOR,
+			MarkdownIn: []string{"text"},
+		},
+		slack.Attachment{
+			Title: "Demo time - Iteration 4",
+			Text:
+`- look & feel improvements`,
+			Color:      TAB_COLOR,
+			MarkdownIn: []string{"text"},
+		},
+		slack.Attachment{
+			Title: "Summary",
+			Text:
+`- simple UI
+- tight development cycles
+- immediate user value`,
+			ImageURL: "https://cdn-images-2.medium.com/max/800/1*B0dX0geQyEYFmCyd5kJIWw.jpeg",
+			Color:      TAB_COLOR,
+			MarkdownIn: []string{"text"},
+		},
+		slack.Attachment{
+			Title: "Q & A",
+			Text:
+`--- ​*Thanks!*​ ---`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
