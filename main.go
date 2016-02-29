@@ -5,6 +5,7 @@ import (
 	"github.com/nlopes/slack"
 	"net/http"
 	"os"
+	"strings"
 )
 
 const (
@@ -198,6 +199,7 @@ func ParseMessageEvent(rtm *slack.RTM, event *slack.MessageEvent) {
 }
 
 func matches(keyword string, command string) bool {
+	keyword = strings.ToLower(keyword)
 	return len(keyword) > 0 && len(keyword) <= len(command) && command[:len(keyword)] == keyword
 }
 
