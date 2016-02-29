@@ -71,9 +71,8 @@ var (
 `Slack clients for mobile devices already exist. It IS the UI interface to our app. (And many other bot apps)
 - text based interface is ​*simple*​, text as input, text as output. ​*No more building buttons.*​
 - very little visual design required (​*no pixel pushing*​, branding etc.)
-- ​*conversational UI*​ is a delightful user experience
-- markdown, emoji, attachments, links for richer user experience
-- ​*fast development cycle*​ providing ​*immediate user value*​`,
+- ​*fast development cycle*​ providing ​*immediate user value*
+- ​*conversational UI*​ is a delightful user experience​`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
