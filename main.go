@@ -47,11 +47,12 @@ var (
 		},
 		slack.Attachment{
 			Title: "Solution",
-			Text:
-`- ​*We use Slack*​ as a communication tool
+			Text: `
+- ​*We use Slack*​ as a communication tool
 - Slack provides integrations - ​*bots*​
-- Simple racquetbot had already been developed
-- Why not use Slack to create a bot with ​*conversational UI style*​`,
+- Why not use Slack to create a bot with ​*conversational UI style*​
+- Slack client exists for iOS and Android already
+- Unitasker!`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
@@ -60,11 +61,8 @@ var (
 			Text:
 `Supporting different mobile platforms
 - create a new app for ​*iOS, Android*​
+- slow...
 - ​*design app twice*​ to match mobile device style
-- many screens
-- design user interactions / screen flows
-- branding
-- support for old and new OS versions
 - ​*distribute*​ a brand new app to install on their devices
 - ​*different languages*​ to build on multiple mobile devices`,
 			Color:      TAB_COLOR,
@@ -84,16 +82,18 @@ var (
 		},
 		slack.Attachment{
 			Title: "Our Journey",
-			Text:
-`First day
- - Within mere hours, first fully functioning feature tested, implemented, and delivered
-Second day
- - more features: ability to create and update new faces... then ported to events, helps, interestings`,
+			Text: `
+- Introducing *Whiteboard Bot*!
+- Small incremental changes towards *MVP*
+- Extremely agile process with fast instant user value
+- Receive *immediate feedback* from users
+`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
 		slack.Attachment{
 			Title: "Iterated on feature set",
+			Text: ``,
 			ImageURL: "https://cdn-images-2.medium.com/max/800/1*a036VX4scwQquEtBOef8tg.jpeg",
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
