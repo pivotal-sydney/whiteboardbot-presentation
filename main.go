@@ -94,12 +94,6 @@ Second day
 		},
 		slack.Attachment{
 			Title: "Iterated on feature set",
-			Text:
-`- abbreviations & case insensitivity
-- combined title into create command
-- help and usage
-- ability to present standup
-- look and feel improvements`,
 			ImageURL: "https://cdn-images-2.medium.com/max/800/1*a036VX4scwQquEtBOef8tg.jpeg",
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
