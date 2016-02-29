@@ -31,28 +31,27 @@ var (
 		},
 		slack.Attachment{
 			Title: "Typical Whiteboard usage",
-			Text: `
-- Works great when accessed using a desktop
+			Text:
+`- Works great when accessed using a desktop
 - Can utilise web interface`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
 		slack.Attachment{
 			Title: "Not perfect mobile experience",
-			Text: `
-- Require sign in process in order to input and view items
+			Text:
+`- Require sign in process in order to input and view items
 - Website is not mobile friendly`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
 		slack.Attachment{
 			Title: "Solution",
-			Text: `
-- ​*We use Slack*​ as a communication tool
+			Text:
+`- ​*We use Slack*​ as a communication tool
 - Slack provides integrations - ​*bots*​
 - Why not use Slack to create a bot with ​*conversational UI style*​
-- Slack client exists for iOS and Android already
-- Unitasker!`,
+- Slack client exists for iOS and Android already`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
@@ -62,9 +61,7 @@ var (
 `Supporting different mobile platforms
 - create a new app for ​*iOS, Android*​
 - slow...
-- ​*design app twice*​ to match mobile device style
-- ​*distribute*​ a brand new app to install on their devices
-- ​*different languages*​ to build on multiple mobile devices`,
+- ​*design app twice*​ to match mobile device style`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
@@ -82,25 +79,21 @@ var (
 		},
 		slack.Attachment{
 			Title: "Our Journey",
-			Text: `
-- Introducing *Whiteboard Bot*!
+			Text:
+`- Introducing *Whiteboard Bot*!
 - Small incremental changes towards *MVP*
 - Extremely agile process with fast instant user value
 - Receive *immediate feedback* from users
 `,
-			Color:      TAB_COLOR,
-			MarkdownIn: []string{"text"},
-		},
-		slack.Attachment{
-			Title: "Iterated on feature set",
-			Text: ``,
 			ImageURL: "https://cdn-images-2.medium.com/max/800/1*a036VX4scwQquEtBOef8tg.jpeg",
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
 		slack.Attachment{
 			Title: "Demo time - Iteration 1",
-			Text: `- mirror message, new faces, helps, interesting, events`,
+			Text:
+`- mirror message
+- new faces, helps, interesting, events`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
@@ -108,7 +101,7 @@ var (
 			Title: "Demo time - Iteration 2",
 			Text:
 `- abbreviated commands
-- case insentivity`,
+- case insensitivity`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
