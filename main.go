@@ -133,7 +133,8 @@ Second day
 			Text:
 `- simple UI
 - tight development cycles
-- immediate user value`,
+- immediate user value
+- conversational UI style`,
 			ImageURL: "https://cdn-images-2.medium.com/max/800/1*B0dX0geQyEYFmCyd5kJIWw.jpeg",
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
