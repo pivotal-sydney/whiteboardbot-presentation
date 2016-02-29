@@ -9,21 +9,12 @@ import (
 
 const (
 	DEFAULT_PORT = "9000"
-	TAB_COLOR    = "28675B"
+	TAB_COLOR    = "49C49F"
 )
 
 var (
 	index  int
 	slides = [...]slack.Attachment{
-		slack.Attachment{
-			Title: "WhiteboardBot - A journey discovering Slack",
-			Text: `
-*Andrew Leung*      aleung@pivotal.io
-*Dariusz Lorenc*    dlorenc@pivotal.io`,
-			ThumbURL: "https://pbs.twimg.com/profile_images/634489008597401600/Ow--zo78_400x400.png",
-			Color:      TAB_COLOR,
-			MarkdownIn: []string{"text"},
-		},
 		slack.Attachment{
 			Title:      "Backstory…",
 			Text:       `Daily standups @ 9:06am`,
@@ -106,23 +97,17 @@ Second day
 		slack.Attachment{
 			Title: "Iterated on feature set",
 			Text: `
+- auto-complete the author by pulling data from Slack
 - abbreviations to reduce number of keystrokes
 - case insensitivity because mobile phones tend to capitalize the first character
-- wb ? for help and usage
-- had Pam help with design for look and feel of the user feedback messages (show iterations through demos)
-- ability to present so we could run standup all using just slack
-- clunky initial pass required users to start an item, then update.
+- clunky initial pass required users to start an item, then update
 - combined title into create command
-- we abbreviated commands
+- wb ? for help and usage
 - improved input to be unique for users
 - added ability to register to multiple standups
-- auto-complete the author by pulling data from Slack`,
-			Color:      TAB_COLOR,
-			MarkdownIn: []string{"text"},
-		},
-		slack.Attachment{
-			Title: "Q & A",
-			Text: `Thank you!`,
+- ability to present so we could run standup all using just slack
+- had Pam help with design for look and feel of the user feedback messages (show iterations through demos)
+`,
 			Color:      TAB_COLOR,
 			MarkdownIn: []string{"text"},
 		},
@@ -172,6 +157,11 @@ func HealthCheckServer(responseWriter http.ResponseWriter, req *http.Request) {
 }
 
 func ParseMessageEvent(rtm *slack.RTM, event *slack.MessageEvent) {
+	if matches(event.Msg.Text, "start") {
+		postMessage(slides[0], rtm, event)
+		index = 1
+	}
+
 	if matches(event.Msg.Text, "next") {
 		if index < len(slides) {
 			postMessage(slides[index], rtm, event)
